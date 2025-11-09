@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Asia-Pacific Strategy Times</title>
+
+    <script src="js/tailwindcss.js"></script>
+
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#34a3d7', secondary: 'rgb(56, 56,58)' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+
+    <link href="css/googleapis.css" rel="stylesheet" />
+
+    <link href="css/remixicon.css" rel="stylesheet" />
+
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/common.css">
+
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="./js/axios.min.js"></script>
+
+    <script src="./js/moment.js"></script>
+
+    <script src="./js/common.js"></script>
+
+    <script src="./js/aos.js"></script>
+
+    <style>
+
+        :where([class^="ri-"])::before {
+
+            content: "\f3c2";
+
+        }
+
+
+
+        .hero-section {
+
+            background-image: url('./images/banner2.jpg');
+
+            background-size: cover;
+
+            background-position: top;
+
+        }
+
+
+
+        .hero-overlay {
+
+            background: rgba(0, 0, 0, 0.3);
+
+        }
+
+
+
+        .choose_bg_overlay {
+
+            background: rgba(46, 78, 63, 0.2);
+
+        }
+
+
+
+        .service_card_content {
+
+            top: -30px;
+
+            width: 90%;
+
+            left: 5%;
+
+            height: auto;
+
+            border-top: 2px solid #34a3d7;
+
+        }
+
+
+
+        .service-card {
+
+            transition: transform 0.3s ease;
+
+            filter: drop-shadow(0px 3px 30px rgba(189, 189, 189, 0.4));
+
+        }
+
+
+
+        .service-card:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+
+        .service_bg {
+
+            background-color: rgb(56, 56, 58);
+
+        }
+
+
+
+        .error {
+
+            color: red;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <!-- Navigation -->
+
+    <div id="header-box"></div>
+
+    <!-- Hero Section -->
+
+    <section class="hero-section relative h-[60vh] md:h-[85vh] flex items-center">
+
+        <div class="hero-overlay w-full h-full absolute inset-0"></div>
+
+        <div class="container mx-auto px-4 pt-10 relative z-10">
+
+            <div class="max-w-3xl">
+
+                <h1 class="text-white text-4xl md:text-6xl font-bold tracking-wide leading-tight mb-1">
+
+                    WELCOME TO
+
+                </h1>
+
+                <h1 class="text-4xl md:text-6xl text-primary">Asia-Pacific Strategy Times</h1>
+
+                <p class="text-white text-lg mt-4 md:mt-8 max-w-3xl">
+
+                    To be a global hub for tech governance and strategic solutions, fostering innovation collaboration
+
+                    and security trust between Asia-Pacific and the world.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-8 md:py-16 px-4 flex justify-center">
+
+        <div class="container flex flex-col md:flex-row items-start">
+
+            <div class="w-full md:w-1/2 py-4 md:py-8 px-4 flex flex-col justify-center">
+
+                <h1 class="text-3xl md:text-4xl text-gray-900 mb-10 font-bold line_height_15">
+
+                    Asia-Pacific Strategy Times is an independent think tank specializing in
+
+                    cutting-edge technology and diplomatic policy analysis across the U.S.
+
+                </h1>
+
+                <button class="common_button" onclick="window.location.href='about.html'">
+
+                    Read More
+
+                </button>
+
+            </div>
+
+            <div class="w-full md:w-1/2 px-4 relative">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div class="service-card bg-white overflow-hidden border-b-4 border-primary">
+
+                        <div class="p-8">
+
+                            <div class="flex items-center flex-col mb-2">
+
+                                <div class="w-16 h-16 flex items-center justify-center bg-primary mb-4 rounded-full">
+
+                                    <img src="./images/choose_icon1.png" alt="" class="w-10 h-10">
+
+                                </div>
+
+                                <div class="flex-1 mb-1">
+
+                                    <h3 class="text-xl font-bold text-gray-800">Expertise First</h3>
+
+                                </div>
+
+                            </div>
+
+                            <p class="text-gray-600 text-center line_height_18">Data-driven research ensuring
+
+                                objectivity and authority
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="service-card bg-white overflow-hidden border-b-4 border-primary">
+
+                        <div class="p-8">
+
+                            <div class="flex items-center flex-col mb-2">
+
+                                <div class="w-16 h-16 flex items-center justify-center bg-primary mb-4 rounded-full">
+
+                                    <img src="./images/choose_icon2.png" alt="" class="w-10 h-10">
+
+                                </div>
+
+                                <div class="flex-1 mb-1">
+
+                                    <h3 class="text-xl font-bold text-gray-800">Innovation Focused</h3>
+
+                                </div>
+
+                            </div>
+
+                            <p class="text-gray-600 text-center line_height_18">Tracking technological breakthroughs and
+
+                                policy frontiers
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="service-card bg-white overflow-hidden border-b-4 border-primary">
+
+                        <div class="p-8">
+
+                            <div class="flex items-center flex-col mb-2">
+
+                                <div class="w-16 h-16 flex items-center justify-center bg-primary mb-4 rounded-full">
+
+                                    <img src="./images/choose_icon3.png" alt="" class="w-10 h-10">
+
+                                </div>
+
+                                <div class="flex-1 mb-1">
+
+                                    <h3 class="text-xl font-bold text-gray-800">Regional Insight</h3>
+
+                                </div>
+
+                            </div>
+
+                            <p class="text-gray-600 text-center line_height_18">Deep-rooted understanding of
+
+                                Asia-Pacific geopolitics and industries
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="service-card bg-white overflow-hidden border-b-4 border-primary">
+
+                        <div class="p-8">
+
+                            <div class="flex items-center flex-col mb-2">
+
+                                <div class="w-16 h-16 flex items-center justify-center bg-primary mb-4 rounded-full">
+
+                                    <img src="./images/choose_icon4.png" alt="" class="w-10 h-10">
+
+                                </div>
+
+                                <div class="flex-1 mb-1">
+
+                                    <h3 class="text-xl font-bold text-gray-800">Client-Centric</h3>
+
+                                </div>
+
+                            </div>
+
+                            <p class="text-gray-600 text-center line_height_18">Tailored solutions for strategic
+
+                                decision-making
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="detail_content_box">
+
+        <div class="relative overflow-hidden bg-secondary">
+
+            <div class="flex flex-col md:flex-row items-center container mx-auto px-4">
+
+                <div class="w-full md:w-1/2 py-8 md:py-20 pr-2 md:pr-12 ">
+
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Navigate Disruption, Lead with Foresight
+
+                    </h2>
+
+                    <p class="text-lg text-white mb-4 line_height_18">
+
+                        We deliver data-powered insights on Asia-Pacific defense dynamics and tech ecosystems, coupled
+
+                        with cross-domain policy analysis spanning geopolitics and security.
+
+                    </p>
+
+                    <ul class="space-y-4 mb-10 list-disc pl-4">
+
+                        <li class="text-lg text-white line_height_18">
+
+                            Strategic Intelligence Briefings
+
+                        </li>
+
+                        <li class="text-lg text-white line_height_18">
+
+                            Industry Analysis
+
+                        </li>
+
+                        <li class="text-lg text-white line_height_18">
+
+                            Policy Advisory
+
+                        </li>
+
+                        <li class="text-lg text-white line_height_18">
+
+                            Executive Roundtables
+
+                        </li>
+
+                    </ul>
+
+                    <button class="common_button" onclick="window.location.href='services.html'">
+
+                        Explore Our Services
+
+                    </button>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="absolute top-0 right-0 bottom-0 md:w-1/2 ">
+
+                <img src="./images/service1.jpg" class="w-full h-full object-cover" />
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-8 md:py-16  px-4 flex justify-center">
+
+        <div class="container flex flex-col justify-center">
+
+            <h1 class="text-3xl md:text-5xl  text-gray-900 mb-8 font-bold text-center">Latest News</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-3" id="newsContainer">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="relative py-12 bg-cover bg-center relative flex justify-center"
+
+        style="background-image: url('./images/contact.jpg');">
+
+        <div class="container flex flex-col md:flex-row items-start z-10">
+
+            <div class="w-full md:w-1/2 py-4 md:py-8 px-4 flex flex-col justify-center">
+
+                <h1 class="text-3xl md:text-5xl text-white mb-6 font-bold line_height_15">
+
+                    Get Strategic Insights, Act Now
+
+                </h1>
+
+                <p class=" text-white mb-8 line_height_18 text-lg">
+
+                    For tailored policy analysis, industry reports, or partnership solutions, submit your inquiry below.
+
+                    Our experts will respond within 24 hours.
+
+                </p>
+
+                <h2 class=" text-white text-xl mb-2">Privacy Policy Statement</h2>
+
+                <p class=" text-white mb-10 line_height_18 text-lg">
+
+                    Your data is protected under Singapore PDPA regulations
+
+                </p>
+
+                <div class="flex items-center mb-2 mr-4">
+
+                    <div class="flex items-center justify-center text-white mr-2 text-xl">
+
+                        <i class="ri-mail-line ri-xl"></i>
+
+                    </div>
+
+                    <a href="/cdn-cgi/l/email-protection#480b27253829263108293b212938292b3c21252d3b662b2725" class="text-white hover:underline text-xl"><span class="__cf_email__" data-cfemail="3f7c50524f5e51467f5e4c565e4f5e5c4b56525a4c115c5052">[email&#160;protected]</span></a>
+
+                </div>
+
+            </div>
+
+            <div class="w-full md:w-1/2 px-4 relative">
+
+                <div class="relative bg-white  p-8 ">
+
+                    <h1 class=" text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-10">
+
+                        Send Us A Message
+
+                    </h1>
+
+                    <form id="contactForm">
+
+                        <div class="mb-6">
+
+                            <div>
+
+                                <input type="text" placeholder="Name*" id="name"
+
+                                    class="w-full px-4 py-3 border border-gray-300  focus:border-primary focus:ring-1 focus:ring-primary text-sm" />
+
+                                <span id="nameError" class="error"></span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mb-6">
+
+                            <input type="text" placeholder="Organization/Company" id="company"
+
+                                class="w-full px-4 py-3 border border-gray-300  focus:border-primary focus:ring-1 focus:ring-primary text-sm" />
+
+                        </div>
+
+
+
+                        <div class="mb-6">
+
+                            <input type="text" placeholder="Email*" id="email"
+
+                                class="w-full px-4 py-3 border border-gray-300  focus:border-primary focus:ring-1 focus:ring-primary text-sm" />
+
+                            <span id="emailError" class="error"></span>
+
+                        </div>
+
+                        <div class="mb-10">
+
+                            <input type="text" placeholder="Phone" id="phone"
+
+                                class="w-full px-4 py-3 border border-gray-300  focus:border-primary focus:ring-1 focus:ring-primary text-sm" />
+
+                        </div>
+
+                        <button type="submit"
+
+                            class="bg-primary text-white px-6 py-3 inline-flex items-center whitespace-nowrap hover:bg-opacity-90 transition-colors">
+
+                            Submit Request
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="footer-box"></div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+        AOS.init({
+
+            duration: 1000,
+
+            once: true
+
+        });
+
+        customMethod()
+
+        $('.language_en').click(function () {
+
+            window.location.href = "./index.html";
+
+        });
+
+        $('.language_zh').click(function () {
+
+            window.location.href = "./zh/index.html";
+
+        });
+
+        axios.get('/api/enArticles')
+
+            .then(function (response) {
+
+                const newsContainer = $('#newsContainer');
+
+                let indexListData = response.data.slice(0, 3);
+
+                indexListData.forEach(function (article) {
+
+                    const newsItem = `
+
+                <div class="article-card relative cursor_pointer p-4 border_1 border-gray-200 hover-card-container" onclick="window.location.href='news-detail.html?id=${article.id}'">
+
+                    <div class="absolute py-5 relative hover-card-content z-10">
+
+                        <div class="font-normal text-primary mb-2 text-5xl article_card_date">${moment(Number(article.date)).format('D')}</div>
+
+                        <div class="font-normal text-primary mb-6 article_card_date">${moment(Number(article.date)).format('MMMM YYYY')}</div>
+
+                        <div class="font-bold text-primary mb-4 text-lg article_card_date">${(() => {
+
+                            switch (article.classifyValue) {
+
+                                case 'Tech':
+
+                                    return 'Tech Powerplay Monitor';
+
+                                case 'Defense':
+
+                                    return 'Global Defense Dynamics';
+
+                                case 'Geostrategy':
+
+                                    return 'Decoding Geostrategy';
+
+                                default:
+
+                                    return article.classifyValue;
+
+                            }
+
+                        })()}</div>
+
+                        <h3 class="text-2xl font-bold mb-6 article_card_title ellipsis_2_line">
+
+                            ${article.title}
+
+                        </h3>
+
+                         <div class="ellipsis_2_line text-gray-600 article_card_content">
+
+                            ${article.content}
+
+                        </div>
+
+                    </div>
+
+                    <button class="hover-card-button text-white border-2 z-10 border-white py-2 px-4 absolute bottom-4 left-4 right-4">
+
+                            Read More
+
+                        </button>
+
+                    <div class="relative h-48 overflow-hidden">
+
+                        <img src="./backstage/${article.image}"
+
+                            alt="${article.title}" class="w-full h-full object-cover object-top" />
+
+                    </div>
+
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
+
+                        style="background-image: url('./backstage/${article.image}');"></div>
+
+                    <div class="absolute inset-0 bg-cover bg-center hover-card-bg " 
+
+                        style="background-image: url('./backstage/${article.image.replace("\\", "/")}');"></div>
+
+                    </div>
+
+                </div>
+
+            `;
+
+                    newsContainer.append(newsItem);
+
+                });
+
+            })
+
+            .catch(function (error) {
+
+                console.error(error);
+
+            });
+
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            let canSubmit = true;
+
+            const nameInput = document.getElementById('name');
+
+            const nameError = document.getElementById('nameError');
+
+            const emailInput = document.getElementById('email');
+
+            const emailError = document.getElementById('emailError');
+
+            if (nameInput.value === "") {
+
+                nameError.textContent = 'Name cannot be empty';
+
+                canSubmit = false;
+
+            } else {
+
+                nameError.textContent = '';
+
+            }
+
+            if (emailInput.value === "") {
+
+                emailError.textContent = 'Email cannot be empty';
+
+                canSubmit = false;
+
+            } else {
+
+                emailError.textContent = '';
+
+            }
+
+
+
+            if (canSubmit) {
+
+                var name = $("#name").val();
+
+                var company = $("#company").val();
+
+                var email = $("#email").val();
+
+                var phone = $("#phone").val();
+
+                let formData = new FormData();
+
+                formData.append('date', new Date().getTime());
+
+                formData.append('name', name);
+
+                formData.append('company', company);
+
+                formData.append('email', email);
+
+                formData.append('phone', phone);
+
+                $.ajax({
+
+                    url: '/api/uploadContact',
+
+                    type: 'POST',
+
+                    data: formData,
+
+                    processData: false,
+
+                    contentType: false,
+
+                    success: function (response) {
+
+                        console.log(response);
+
+                    },
+
+                    error: function (response) {
+
+                        console.log(response);
+
+                    }
+
+                });
+
+                const notification = document.createElement("div");
+
+                notification.className =
+
+                    "fixed top-28 right-4 bg-green-500 text-white px-6 py-3 rounded shadow-lg";
+
+                notification.textContent =
+
+                    "Your data is protected under Singapore PDPA regulations";
+
+                document.body.appendChild(notification);
+
+
+
+                setTimeout(() => {
+
+                    notification.remove();
+
+                }, 3000);
+
+                this.reset();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+
+
+</html>
